@@ -2,8 +2,8 @@
 title: gradio-langgraph
 emoji: 🤗
 colorFrom: yellow
-colorTo: orange
-sdk: {{gradio}}
+colorTo: red
+sdk: gradio
 sdk_version: 5.25.2
 app_file: app.py
 pinned: false
