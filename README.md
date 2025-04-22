@@ -1,5 +1,5 @@
 ---
-title: {{gradio-langgraph}}
+title: gradio-langgraph
 emoji: 🤗
 colorFrom: yellow
 colorTo: orange
