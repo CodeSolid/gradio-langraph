@@ -1,6 +1,6 @@
 ---
 title: gradio-langgraph
-emoji: 🤗
+emoji: 🤠
 colorFrom: yellow
 colorTo: red
 sdk: gradio
