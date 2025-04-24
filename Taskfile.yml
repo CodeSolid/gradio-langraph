@@ -1,0 +1,23 @@
+version: '3'
+
+tasks:
+  download:
+    desc: pull the image from docker hub
+    cmds:
+      - docker pull codesolid/aibase
+      - docker tag codesolid/aibase aibase
+
+  build:
+    desc: Build the Docker image
+    cmds:
+      - docker build -t aibase .
+
+  shell:
+    desc: Run bash in the Docker container with current directory mounted
+    cmds:
+      - docker run -p 8888:8888 -it --rm --env-file .env -v ${PWD}:/app aibase bash
+
+  jupyter:
+    desc: Run Jupyter in the Docker container
+    cmds:
+      - docker run -u jupyter -p 8888:8888 -it --rm --env-file .env -v ${PWD}:/app aibase jupyter lab --no-browser --ip="0.0.0.0"  --NotebookApp.token='' --NotebookApp.password=''
